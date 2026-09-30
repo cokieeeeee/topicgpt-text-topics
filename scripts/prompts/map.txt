@@ -1,0 +1,22 @@
+你是数字保存领域的评估助手。请将下列主题映射到 OAIS（ISO 14721）参考模型定义的六个功能之一。
+
+【OAIS 六功能】
+1. Ingest（摄入）：接收、校验、登记数字对象，为长期保存做准备。
+2. ArchivalStorage（档案存储）：物理/逻辑存储、完整性校验、刷新、介质管理。
+3. DataManagement（数据管理）：元数据管理、标识、目录与数据库维护。
+4. PreservationPlanning（保存规划）：格式迁移、仿真、长期保存策略、技术观测与风险评估。
+5. Access（利用）：检索、重现、分发、用户服务。
+6. Administration（管理）：整体政策、授权、审计、安全与合规监管。
+
+【待映射主题】
+{TOPICS}
+
+任务：为每个主题指定最匹配的一个 OAIS 功能，并给出一句理由。
+- 一个主题只能归入一个功能（选最主导者）。
+- 若主题横跨多个功能，选其"核心供给目标"所在功能。
+
+严格按以下 JSON 格式输出，不要输出任何解释性文字：
+[
+  {"topic_id": "主题ID", "oais_func": "PreservationPlanning", "rationale": "理由"}
+]
+（oais_func 取值限：Ingest / ArchivalStorage / DataManagement / PreservationPlanning / Access / Administration）

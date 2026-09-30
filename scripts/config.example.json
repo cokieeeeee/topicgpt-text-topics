@@ -1,0 +1,32 @@
+{
+  "model": "deepseek-v4-flash",
+  "model_version": "DeepSeek-V4-Flash-0731",
+  "base_url": "https://api.deepseek.com",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "gen_temperature": 0.3,
+  "assign_temperature": 0.0,
+  "induce_temperature": 0.2,
+  "map_temperature": 0.0,
+  "seed": 20260930,
+  "gen_rounds": 8,
+  "gen_sample_per_round": 80,
+  "assign_batch": 10,
+  "stability_resample": 200,
+  "paths": {
+    "prep": "./data/corpus_paragraphs.jsonl",
+    "out_dir": "./output",
+    "topics": "./work/topics.json",
+    "assignments": "./work/paragraph_topic.jsonl",
+    "tree": "./work/topic_tree.json",
+    "oais_map": "./work/topic_oais_mapping.csv",
+    "oais_cov": "./work/oais_coverage.csv"
+  },
+  "oais_functions": [
+    "Ingest(摄入)",
+    "ArchivalStorage(档案存储)",
+    "DataManagement(数据管理)",
+    "PreservationPlanning(保存规划)",
+    "Access(利用)",
+    "Administration(管理)"
+  ]
+}
